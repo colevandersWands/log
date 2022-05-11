@@ -1,7 +1,7 @@
-const inlineConsole = Object.entries(console).reduce(
+const inlineConsoleMethods = Object.entries(console).reduce(
   (all, next) => ({
     ...all,
-    [next[0]]: (thing) => (next[1](thing), thing),
+    [next[0]]: (thing) => (console[next[0]](thing), thing),
   }),
   {},
 );
