@@ -6,7 +6,4 @@ const inlineConsole = Object.entries(console).reduce(
   {},
 );
 
-export const log = Object.assign(
-  inlineConsole.log,
-  inlineConsole,
-);
+export default Object.assign(inlineConsoleMethods.log, inlineConsoleMethods);
